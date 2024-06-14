@@ -1,0 +1,55 @@
+<%- include('layouts/header.ejs'); -%>
+
+<%- include('layouts/title.ejs') -%>
+
+<%- include('layouts/nav.ejs') -%>
+
+    <body>
+
+        
+
+                   
+                        <table>
+                            <thead>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>Province</th>
+                                <th>Post Code</th>
+                                <th>Products</th>
+                                <!-- <th>Shipping Charges</th> -->
+                                <th>Delivery Time</th>
+                                <th>Sub Total</th>
+                                <th>Tax</th>
+                                <th>Total</th>
+                            </thead>
+                            <tbody>
+                                <% x.forEach((y) => {
+                                %>
+                                <tr>
+                                    <td><%= y.name %></td>
+                                    <td><%= y.email %></td>
+                                    <td><%= y.phone %></td>
+                                    <td><%= y.address %></td>
+                                    <td><%= y.city %></td>
+                                    <td><%= y.province %></td>
+                                    <td><%= y.postcode %></td>
+                                    <td>
+                                      <% y.products.forEach((p) => { %>
+                                        <%= p.name %> - <%= p.Quantity %> <br>
+                                      <% }) %>
+                                    </td>
+                                    <td><%= y.deliverytime %></td>
+                                    <td>$<%= y.totalcost.toFixed(2) %></td>
+                                    <td>$<%= y.totalTax.toFixed(2) %></td>
+                                    <td>$<%= y.totalBill.toFixed(2) %></td>
+                                </tr>
+                                <% }) %>
+                            </tbody>
+                       </table>
+                        
+                
+    </body>
+    <%- include('layouts/footer.ejs'); -%>

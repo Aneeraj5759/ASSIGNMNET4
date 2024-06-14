@@ -1,0 +1,67 @@
+<%- include('layouts/header.ejs'); -%>
+<body>
+    <%- include('layouts/title.ejs') -%>
+    <%- include('layouts/nav.ejs') -%>
+
+    <h3 class="receipt">My Shop Invoice</h3>
+
+    <% if(typeof(totalBill) !='undefined' ) { %>
+    <div class="order-container">
+        <div class="section">
+            <div class="label"><span>Name</span></div>
+            <div class="separator">:</div>
+            <div class="value"><%= name %></div>
+        </div>
+        <div class="section">
+            <div class="label"><span>Email</span></div>
+            <div class="separator">:</div>
+            <div class="value"><%= email %></div>
+        </div>
+        <div class="section">
+            <div class="label"><span>Phone</span></div>
+            <div class="separator">:</div>
+            <div class="value"><%= phone %></div>
+        </div>
+        <div class="section">
+            <div class="label"><span>Delivery Address</span></div>
+            <div class="separator">:</div>
+            <div class="value">
+                <%= address.toUpperCase() %> <br>
+                <%= city.toUpperCase() %> <br>
+                <%= street.toUpperCase() %> <br>
+                <%= province.toUpperCase() %> - <%= postcode %>
+            </div>
+        </div>
+
+        <% products.forEach(product=> {
+            if(product.Quantity > 0) { %>
+        <div class="section">
+            <div class="label"><span><%= product.Quantity %></span> <span><%= product.name %></span>  @ <span><%= product.itemprice %></span> </div>
+            <div class="separator">:</div>
+            <div class="value"><%= "$" +(product.Quantity * product.itemprice) %></div>
+        </div>
+        <% } }); %>
+        <div class="section">
+            <div class="label"><span>Shipping Charges</span></div>
+            <div class="separator">:</div>
+            <div class="value"><%= "$" +shippingcharges %></div>
+        </div>
+        <div class="section">
+            <div class="label"><span>Sub Total</span></div>
+            <div class="separator">:</div>
+            <div class="value"><%= "$" +totalcost %></div>
+        </div>
+        <div class="section">
+            <div class="label"><span>Tax</span> @ <span><%= tax %></span></div>
+            <div class="separator">:</div>
+            <div class="value"><%= "$" +totalTax.toFixed(2) %></div>
+        </div>
+        <div class="section">
+            <div class="label"><span>Total</span></div>
+            <div class="separator">:</div>
+            <div class="value"><%= "$" +totalBill %></div>
+        </div>
+    </div>
+    <% } %>
+</body>
+<%- include('layouts/footer.ejs'); -%>

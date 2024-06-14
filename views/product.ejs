@@ -1,0 +1,103 @@
+<%- include('layouts/header.ejs'); -%>
+
+    <body>
+        <div class="container">
+            <%- include('layouts/title.ejs') -%>
+
+                <%- include('layouts/nav.ejs') -%>
+                    <h2>Our Catalog</h2>
+                    <section class="w50">
+
+                        <form action="" name="fundraiser" onsubmit="return onSubmit();" method="post">
+                            <main class="Productclass">
+
+                                <div id="products">
+                                    <div class="product">
+                                        <img src="./images/1flower.jpg" alt="bunch1">
+                                        <label for="item1">Flowers Bouquet $60</label>
+                                        <input type="text" id="item1" name="itemQuantity1" placeholder="Quantity">
+                                    </div>
+                                    <div class="product">
+                                        <img src="./images/1515697009-tulips.jpg" alt="bunch2">
+                                        <label for="item2">Tulips $8</label>
+                                        <input type="text" id="item2" name="itemQuantity2" placeholder="Quantity">
+                                    </div>
+                                    <div class="product">
+                                        <img src="./images/handtied_23_square.webp" alt="bunch3">
+                                        <label for="item3">Crafter Bouquet $90</label>
+                                        <input type="text" id="item3" name="itemQuantity3" placeholder="Quantity">
+                                    </div>
+                                    <div class="product">
+                                        <img src="./images/Rectangle_105_1.webp" alt="bunch4">
+                                        <label for="item4">Pink Tulip $25</label>
+                                        <input type="text" id="item4" name="itemQuantity4" placeholder="Quantity">
+                                    </div>
+                                </div>
+                            </main>
+                            <aside>
+
+                                <h1>Personal Details</h1>
+                                <label for="name">Name </label>
+                                <input type="text" id="name" name="name" placeholder="First Last" autofocus><br>
+                                <label for="email">Email </label>
+                                <input type="text" id="email" name="email" placeholder="Email"><br>
+                                <label for="phone">Phone </label>
+                                <input type="text" id="phone" name="phone" placeholder="1111111111"><br>
+                                <h4>Address Details</h6>
+                                    <label for="address">Address Line 1 </label>
+                                    <input type="text" id="address" name="address" placeholder="Home number"><br>
+                                    <label for="street">Street</label>
+                                    <input type="text" id="street" name="street" placeholder="Street Name"><br>
+                                    <label for="city">City </label>
+                                    <input type="text" id="city" name="city" placeholder="City"><br>
+                                    <label for="postcode">Post Code </label>
+                                    <input type="text" id="postcode" name="postcode" placeholder="XXX XXX"><br>
+                                    <label for="province">Province</label>
+                                    <select id="province" name="province">
+                                        <option value="">Select Province</option>
+                                        <option value="ON">Ontario</option>
+                                        <option value="NS">Nova Scotia</option>
+                                        <option value="AL">Alberta</option>
+                                        <option value="P.E.I">Prince Edward Island</option>
+                                        <option value="NB">New Brunswick</option>
+                                        <option value="QC">Quebec</option>
+                                        <option value="MB">Manitoba</option>
+                                        <option value="SK">Saskatchewan</option>
+                                        <option value="BC">British Columbia</option>
+                                        <option value="NL">Newfoundland and Labrador</option>
+                                    </select><br>
+                                    <label for="deliveryTime">Delivery Time</label>
+                                    <select id="deliveryTime" name="deliveryTime">
+                                        <option value="1day">1 Day</option>
+                                        <option value="2day">2 Days</option>
+                                        <option value="3day">3 Days</option>
+                                    </select>
+                                    <br><br>
+                                    <input type="submit" value="Submit"> &nbsp;&nbsp;
+                                    <input type="reset" value="Clear">
+                            </aside>
+                        </form>
+                        <p id="errors">
+                        <div id="errors">
+                            <% if(typeof(errors) !='undefined' ) { for(let error of errors) { %>
+                                <p class="errors">
+                                    <%= error.msg %>
+                                </p>
+                                <% } %>
+                                    <p class="errors">
+                                        <%= '-- Please fix above errors --' %>
+                                    </p>
+                                    <% } %>
+                        </div>
+                        </p>
+                    </section>
+
+
+                    <section class="w50">
+                    </section>
+
+        </div>
+
+
+    </body>
+    <%- include('layouts/footer.ejs'); -%>

@@ -1,0 +1,82 @@
+
+<body>
+    <div class="container">
+        <header>Fresh Flowers</header>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="">Flowers</a>
+            <a href="">Gallery</a>
+            <a href="order.html">Order</a>
+            <a href="">Contact</a>
+        </nav>
+        <h2>Our Catalog</h2>
+        <main class="Productclass">
+            
+            <div id="products">
+                <div id="product">
+                    <img src="./public/images/1flower.jpg" alt="bunch1">
+                    <label for="item1">Flowers Bouquet $60</label>
+                    <input type="text" id="item1" name="item1Quantity" placeholder="Quantity">
+                </div>
+                <div id="product">
+                    <img src="./public/images/1515697009-tulips.jpg" alt="bunch2">
+                    <label for="item1">Tulips $8</label>
+                    <input type="text" id="item1" name="item1Quantity" placeholder="Quantity">
+                </div>
+                <div id="product">
+                    <img src="./public/images/handtied_23_square.webp" alt="bunch3">
+                    <label for="item1">Crafter Bouquet $90</label>
+                    <input type="text" id="item1" name="item1Quantity" placeholder="Quantity">
+                </div>
+                <div id="product">
+                    <img src="./public/images/Rectangle_105_1.webp" alt="bunch4">
+                    <label for="item1">Pink Tulip $25</label>
+                    <input type="text" id="item1" name="item1Quantity" placeholder="Quantity">
+                </div>
+
+            </div>
+        </main>
+        <aside>
+            <form action="" name="fundraiser" onsubmit="return onSubmit();" method="post">
+                <h1>Personal Details</h1>
+                <label for="name">Name </label>
+                <input type="text" id="name" name="Full Name" placeholder="First Last" autofocus><br>
+                <label for="email">Email </label>
+                <input type="text" id="email" name="email" placeholder="Email"><br>
+                <label for="phone">Phone </label>
+                <input type="text" id="phone" name="phone" placeholder="1111111111"><br>
+                <h4>Address Details</h6>
+                <label for="address">Address Line 1 </label>
+                <input type="text" id="address" name="Address" placeholder="Home number"><br>
+                <label for="street">Street</label>
+                <input type="text" id="street" name="Street" placeholder="Street Name"><br>
+                <label for="city">City </label>
+                <input type="text" id="city" name="City" placeholder="City"><br>
+                <label for="province">Province</label>
+                <select id="province" name="province" required>
+                    <option value="">Select Province</option>
+                    <option value="ON">Ontario</option>
+                    <option value="NS">Nova Scotia</option>
+                    <option value="AL">Alberta</option>
+                    <option value="P.E.I">Prince Edward Island</option>
+                    <option value="NB">New Brunswick</option>
+                    <option value="QC">Quebec</option>
+                    <option value="MB">Manitoba</option>
+                    <option value="SK">Saskatchewan</option>
+                    <option value="BC">British Columbia</option>
+                    <option value="NL">Newfoundland and Labrador</option>
+                </select><br>
+                <br><br>
+                <input type="submit" value="Submit"> &nbsp;&nbsp;
+                <input type="reset" value="Clear">
+            </form>
+            <!-- <p id="datareceipt">You can find your Receipt Here</p> -->
+        </aside>
+
+
+    </div>
+
+    
+</body>
+</html>

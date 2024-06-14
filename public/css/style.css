@@ -1,0 +1,179 @@
+.container{
+    width: 1120px;
+    margin: 10px auto;
+    border: 10px solid white;
+    border-radius: 10px;
+}
+
+header{
+    text-align: centers;
+    justify-content: space-between;
+    display: flex;
+    padding-bottom: 10px;
+    font-style: oblique;
+    font-weight: bolder;
+    padding-left: 50%;
+    font-size: x-large;
+
+}
+
+nav{
+    text-align: center;
+    padding: 10px 0px;
+    border: 1px solid black;
+    border-radius: 20px;
+    color: black;
+}
+
+nav a{
+    text-align: center;
+    color: black;
+    padding: 0px 30px;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: pink;
+}
+
+.headerclass h1{
+    width: 1120px;
+    text-align: center;
+    
+}
+
+#products{
+    padding-top: 50px;
+    margin-top: 20px;
+    display: grid;
+    width: 600px;
+    height: auto;
+    float: left;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.product img{
+    height: 150px;
+    width: 200px;
+    background-size: cover;
+    
+}
+/* main img{
+    width: 25%;
+    height: 20%;
+} */
+
+/* main label{
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+} */
+label:after { content: ": " }
+/* main input{
+    width: 30px;
+    margin-left: 10px;
+} */
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.product img,.product label,.product input{
+    margin: 10px 0;
+
+}
+
+aside{
+    margin-top: 20px;
+    border: 1px solid white;
+    width: 400px;
+    height: 480px;
+    float: right;
+    background-color: pink;
+    border-radius: 20px;
+    padding: 20px;
+}
+aside label{
+    display: table-cell;
+    text-align: right;
+}
+aside input {
+    display: table-cell;
+}
+
+
+.formData{
+    clear:both;
+    width: 100%;
+    background-color: pink;
+    min-height: 250px;
+}
+.errors{
+    clear: both;
+    background-color: blueviolet;
+}
+
+
+
+table {
+    margin-top: 50px;
+    width: 100%;
+    
+    border-radius: 30px;
+}
+
+thead th, tbody td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+
+.order-container {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.label {
+    flex: 1;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.separator {
+    flex: 0; 
+    margin: 0 10px;
+}
+
+.value {
+    flex: 1;
+    text-align: right;
+    margin-right: 30px;
+}
+
+.receipt {
+    text-align: center;
+}
